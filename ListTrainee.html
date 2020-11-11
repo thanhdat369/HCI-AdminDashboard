@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Projects - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap2.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/typicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <link rel="stylesheet" href="assets/css/Table-With-Search-1.css">
+    <link rel="stylesheet" href="assets/css/Table-With-Search.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 120 px 20px;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+
+
+
+
+            border: 3px solid #f1f1f1;
+            z-index: 9999;
+            margin: 0;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%)
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: red;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo" href="index.html">Dashboard</a><button
+                class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="sr-only">Toggle
+                    navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown"
+                            aria-expanded="false" href="#">Account&nbsp;</a>
+                        <div class="dropdown-menu" role="menu"
+                            style="color: black;background-color: rgb(108,234,234);">
+                            <a class="dropdown-item" role="presentation" href="ListTrainee.html"
+                                style="color:black"><strong>Manage trainee's account</strong></a>
+                            <a class="dropdown-item" role="presentation" href="ListTrainers.html"
+                                style="color: black;"><strong>Manage trainer's account</strong></a>
+                            <a class="dropdown-item" role="presentation" href="BlackList.html"
+                                style="color: black;"><strong>Black List</strong></a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false"
+                        href="#">Course&nbsp;</a>
+                      <div class="dropdown-menu" role="menu" style="color: black;background-color: rgb(108,234,234);"><a
+                          class="dropdown-item" role="presentation" href="ListCourse.html" style="color:black;"><strong>
+                            Exercise Categori</strong></a>
+                            <a
+                          class="dropdown-item" role="presentation" href="ListExercise.html" style="color:black;"><strong>
+                            Manage Exercise</strong></a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown"
+                            aria-expanded="false" href="#">&nbsp; <img src="assets/img/avatars/avatar.jpg"
+                                style="width: 30px;height: 30px;">&nbsp; Beshin&nbsp;</a>
+                        <div class="dropdown-menu" role="menu"
+                            style="color: rgb(108,234,234);background-color: rgb(108,234,234);"><a class="dropdown-item"
+                                role="presentation" href="AdminInfo.html"
+                                style="color:black;"><strong>Profile</strong></a><a class="dropdown-item"
+                                role="presentation" href="#" style="color:black;"><strong>Sign
+                                    out</strong></a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page projects-page">
+        <section class="portfolio-block projects-cards">
+            <h1 style="font-size: 30px;margin-bottom: 0px;margin-top: 0px;color: rgb(197,102,102); text-align: center;">
+                LIST OF TRAINEE</h1>
+            <div class="container">
+                <div class="col-md-12 search-table-col" style="margin-bottom: 0px;margin-top: 24px;">
+                    <div class="form-group pull-right col-lg-4"><input type="text" placeholder="Search by typing here.."
+                            class="search form-control"></div><span class="counter pull-right"></span>
+                    <div class="table-responsive table-bordered table table-hover table-bordered results">
+                        <table class="table table-bordered table-hover">
+                            <thead class="bill-header cs">
+                                <tr>
+                                    <th id="trs-hd" class="col-lg-1" style="width: 400px;">Email</th>
+                                    <th id="trs-hd" class="col-lg-2" style="width: 300px;">Full name</th>
+                                    <th id="trs-hd" class="col-lg-3" style="width: 300px;">Phone</th>
+                                    <th id="trs-hd" class="col-lg-2" style="width: 300px;"><br>Gender<br></th>
+
+                                    <th id="trs-hd" class="col-lg-2" style="width: 300px;">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Hieudeptrai@gmail.com</td>
+                                    <td>Hieu XY</td>
+                                    <td>05788343434</td>
+                                    <td>Male</td>
+
+                                    <td>
+
+                                        <button onclick="Redirect()" ; class="btn btn-danger" type="submit"
+                                            style="margin-left: 5px;"><i class="typcn typcn-cancel"
+                                                style="font-size: 18px;"></i></button>
+
+                                        <button class="btn btn-danger" onclick="openForm()" type="submit"
+                                            style="margin: 5px; background-color:green;font-color: green; ">
+                                            <i style="font-size:23px;" class="fa">&#xf05a;</i></button>
+                                    </td>
+
+
+
+
+                                </tr>
+                                <tr>
+                                    <td>DatUI@gmail.com</td>
+                                    <td>DAT LE</td>
+                                    <td>0578833388</td>
+                                    <td>Male</td>
+
+                                    <td><button class="btn btn-danger" type="submit" style="margin: 5px;"><i
+                                                class="typcn typcn-cancel" style="font-size: 18px;"></i></button>
+                                        <button class="btn btn-danger" onclick="openForm()" type="submit"
+                                            style="margin: 5 5 5 4.9px; background-color:green;font-color: green; ">
+                                            <i style="font-size:23px;" class="fa">&#xf05a;</i></button>
+                                        <div class="form-popup" id="myForm" style="display:none">
+                                            <form action="/action_page.php" class="form-container">
+                                                <h1 style="margin-left:17%; margin-top:10%">Trainee's information</h1>
+                                                <div style="position: absolute;
+    							top: 19%;
+    							left: 50%;
+   							 margin-right: -50%;
+    							transform: translate(-50%, -50%)"><img src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t1.15752-9/123681594_1219027958471571_5285980700792844473_n.jpg?_nc_cat=100&ccb=2&_nc_sid=ae9488&_nc_ohc=5nuR_PnjxJcAX8bdDSu&_nc_ht=scontent.fsgn2-6.fna&oh=7c390a893c800e42db9da883d43d1eba&oe=5FCEA452"
+                                                        alt="Avatar"
+                                                        style="margin:50px auto;min-width: 200px;min-height: 200px;width: 100px;height: 100px; border-radius: 50%;">
+                                                </div>
+                                                <label for="email" style="margin-top:200px"><b>Email</b></label>
+                                                <input type="text" value="DatUI@gmail.com" readonly>
+
+                                                <label for="name"><b>Name</b></label>
+                                                <input type="text" value="LE THANH DAT">
+                                                <label for="name"><b>Gender</b></label>
+                                                <input type="text" value="Male">
+                                                <label for="Age"><b>Age</b></label>
+                                                <input type="Text" value="21">
+                                                <label for="name"><b>Weight</b></label>
+                                                <input type="text" value="55kg">
+                                                <label for="name"><b>Height</b></label>
+                                                <input type="text" value="1.9m">
+                                                <label for="name"><b>Phone Number</b></label>
+                                                <input type="text" value="0578833388">
+
+                                                <button type="button" onClick="closeForm()" class="btn btn-info btn-lg"
+                                                    data-toggle="modal" data-target="#myModal">Update
+                                                    information</button>
+
+
+
+                                                <button type="button" class="btn cancel"
+                                                    onclick="closeForm()">Close</button>
+                                            </form>
+                                        </div>
+
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Abcxyz@gmail.com</td>
+                                    <td>Salala</td>
+                                    <td>057888888888</td>
+                                    <td>Female</td>
+
+                                    <td><button class="btn btn-danger" type="submit" style="margin-left: 5px;"><i
+                                                class="typcn typcn-cancel" style="font-size: 18px;"></i></button>
+                                        <button class="btn btn-danger" onclick="openForm()" type="submit"
+                                            style="margin: 5px; background-color:green;font-color: green; ">
+                                            <i style="font-size:23px;" class="fa">&#xf05a;</i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Abcxyz@gmail.com</td>
+                                    <td>Loi</td>
+                                    <td>057888888888</td>
+                                    <td>Male</td>
+
+                                    <td><button class="btn btn-danger" type="submit" style="margin-left: 5px;"><i
+                                                class="typcn typcn-cancel" style="font-size: 18px;"></i></button>
+                                        <button class="btn btn-danger" onclick="openForm()" type="submit"
+                                            style="margin: 5px; background-color:green;font-color: green; ">
+                                            <i style="font-size:23px;" class="fa">&#xf05a;</i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Abcxyz@gmail.com</td>
+                                    <td>Huy</td>
+                                    <td>057888888888</td>
+                                    <td>Male</td>
+
+                                    <td><button class="btn btn-danger" type="submit" style="margin-left: 5px;"><i
+                                                class="typcn typcn-cancel" style="font-size: 18px;"></i></button>
+                                        <button class="btn btn-danger" onclick="openForm()" type="submit"
+                                            style="margin: 5px; background-color:green;font-color: green; ">
+                                            <i style="font-size:23px;" class="fa">&#xf05a;</i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Abcxyz@gmail.com</td>
+                                    <td>Nguyen Thi Hoa</td>
+                                    <td>057888888888</td>
+                                    <td>Female</td>
+
+                                    <td><button class="btn btn-danger" type="submit" style="margin-left: 5px;"><i
+                                                class="typcn typcn-cancel" style="font-size: 18px;"></i></button>
+                                        <button class="btn btn-danger" onclick="openForm()" type="submit"
+                                            style="margin: 5px; background-color:green;font-color: green; ">
+                                            <i style="font-size:23px;" class="fa">&#xf05a;</i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Abcxyz@gmail.com</td>
+                                    <td>Huy AT</td>
+                                    <td>057888888888</td>
+                                    <td>Male</td>
+
+                                    <td><button class="btn btn-danger" type="submit" style="margin-left: 5px;"><i
+                                                class="typcn typcn-cancel" style="font-size: 18px;"></i></button>
+                                        <button class="btn btn-danger" onclick="openForm()" type="submit"
+                                            style="margin: 5px; background-color:green;font-color: green; ">
+                                            <i style="font-size:23px;" class="fa">&#xf05a;</i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="modal fade" id="myModal" role="dialog" style:"position: absolute; margin-top:100%; ">
+   								 <div class=" modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Notification</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Information is updated!!</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+<footer class="page-footer" style="margin:50px auto; background-color: #3a749e; height: 100%;">
+    <div class="container" style="height: 50%;">
+        <div class="footer">
+            <div class="container"
+                style="background-color: #3a749e; height: 100%; text-align: center; margin: 50px auto;">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h1 style="font-size: 22px;color: rgb(255,254,254);"><strong>Cơ sở chính:</strong></h1>
+                        <hr style="background-color: #f8f5f5;font-size: 16px;height: 1px;">
+                        <p style="margin-top: 0px;margin-bottom: 0px;color: rgb(247,246,246);width: 316px;"><i
+                                class="icon-location-pin" style="font-size: 18px;"></i><strong>F-Town, D2 street,
+                                Saigon Hi-tech park, District &nbsp;9, HCM city</strong></p>
+                        <p style="margin-top: 0px;margin-bottom: 0px;color: rgb(250,247,247);"><i class="icon-phone"
+                                style="font-size: 18px;"></i><strong>(028) 38.345.345</strong></p>
+                    </div>
+                    <div class="col-md-4" style="background-color: #3a749e;">
+                        <h1 style="font-size: 22px;color: rgb(251,248,248);"><strong>Cơ sở 2:</strong></h1>
+                        <hr style="background-color: #faf4f4;height: 1px;">
+                        <p style="width: 325px;color: rgb(248,244,244);"><i class="icon-location-pin"
+                                style="font-size: 18px;"></i><strong>79 Nguyen &nbsp;Xi Street, Binh Thanh district,
+                                HCM city</strong></p>
+                        <p style="width: 325px;color: rgb(248,244,244);margin-top: -14px;"><strong>&nbsp;</strong><i
+                                class="icon-phone" style="font-size: 18px;"></i><strong>(028) 38 567.567</strong>
+                        </p>
+                    </div>
+                    <div class="col-md-4" style="background-color: #3a749e;">
+                        <h1 style="font-size: 22px;color: rgb(252,251,251);"><strong>Quy định &amp; chính
+                                sách</strong></h1>
+                        <hr style="height: 1px;color: rgb(251,248,248);background-color: #fbf8f8;">
+                        <p style="color: rgb(251,249,249);"><i class="typcn typcn-tick"
+                                style="font-size: 18px;"></i>Điều khoản dịch vụ</p>
+                        <p style="color: rgb(251,248,248);"><i class="typcn typcn-tick"
+                                style="font-size: 18px;"></i>Điều khoản dịch vụ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+<script>
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
+    function OK() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+    }
+    function Redirect() {
+        var txt;
+        var r = confirm("If you ban this account then it will be disabled");
+        if (r == true) {
+            window.location = "BlackList.html";
+        }
+    }
+</script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+<script src="assets/js/Table-With-Search.js"></script>
+<script src="assets/js/theme.js"></script>
+
+
+</html>
