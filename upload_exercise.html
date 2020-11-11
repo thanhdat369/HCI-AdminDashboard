@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Projects - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap2.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
+    />
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css" />
+    <link rel="stylesheet" href="assets/fonts/typicons.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/Table-With-Search-1.css" />
+    <link rel="stylesheet" href="assets/css/Table-With-Search.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      .open-button {
+        background-color: #555;
+        color: white;
+        padding: 120 px 20px;
+        border: none;
+        cursor: pointer;
+      }
+
+      /* The popup form - hidden by default */
+      .form-popup {
+        border: 3px solid #f1f1f1;
+        z-index: 9999;
+        margin: 0;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+      }
+
+      /* Add styles to the form container */
+      .form-container {
+        max-width: 300px;
+        padding: 10px;
+        background-color: white;
+      }
+
+      /* Full-width input fields */
+      .form-container input[type="text"],
+      .form-container input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 5px 0;
+        border: none;
+        background: #f1f1f1;
+      }
+
+      /* When the inputs get focus, do something */
+      .form-container input[type="text"]:focus,
+      .form-container input[type="password"]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+
+      /* Set a style for the submit/login button */
+      .form-container .btn {
+        background-color: #4caf50;
+        color: white;
+        padding: 5px 5px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 5px;
+        opacity: 0.8;
+      }
+
+      /* Add a red background color to the cancel button */
+      .form-container .cancel {
+        background-color: red;
+      }
+
+      /* Add some hover effects to buttons */
+      .form-container .btn:hover,
+      .open-button:hover {
+        opacity: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark portfolio-navbar"
+    >
+      <div class="container">
+        <a class="navbar-brand logo" href="index.html"><b>F P T</b></a
+        ><button
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+        >
+          <span class="sr-only">Toggle navigation</span
+          ><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a
+                class="dropdown-toggle nav-link"
+                data-toggle="dropdown"
+                aria-expanded="false"
+                href="#"
+                >Account&nbsp;</a
+              >
+              <div
+                class="dropdown-menu"
+                role="menu"
+                style="color: black; background-color: rgb(19, 20, 20)"
+              >
+                <a
+                  class="dropdown-item"
+                  role="presentation"
+                  href="ListTrainee.html"
+                  style="color: rgb(151, 149, 149)"
+                  ><strong>Manage trainee's account</strong></a
+                >
+                <a
+                  class="dropdown-item"
+                  role="presentation"
+                  href="ListTrainers.html"
+                  style="color: rgb(151, 149, 149)"
+                  ><strong>Manage trainer's account</strong></a
+                >
+                <a
+                  class="dropdown-item"
+                  role="presentation"
+                  href="BlackList.html"
+                  style="color: rgb(151, 149, 149)"
+                  ><strong>Black List</strong></a
+                >
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="dropdown-toggle nav-link"
+                data-toggle="dropdown"
+                aria-expanded="false"
+                href="#"
+                >Course&nbsp;</a
+              >
+              <div
+                class="dropdown-menu"
+                role="menu"
+                style="color: black; background-color: rgb(0, 0, 0)"
+              >
+                <a
+                  class="dropdown-item"
+                  role="presentation"
+                  href="ListCourse.html"
+                  style="color: rgb(151, 149, 149)"
+                  ><strong> Exercise Categori</strong></a
+                >
+                <a
+                  class="dropdown-item"
+                  role="presentation"
+                  href="ListExercise.html"
+                  style="color: rgb(151, 149, 149)"
+                  ><strong> Manage Exercise</strong></a
+                >
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="dropdown-toggle nav-link"
+                data-toggle="dropdown"
+                aria-expanded="false"
+                href="#"
+                >&nbsp;
+                <img
+                  src="assets/img/avatars/avatar.jpg"
+                  style="width: 30px; height: 30px"
+                />&nbsp; Beshin&nbsp;</a
+              >
+              <div
+                class="dropdown-menu"
+                role="menu"
+                style="
+                  color: rgb(151, 149, 149);
+                  background-color: rgb(0, 0, 0);
+                "
+              >
+                <a
+                  class="dropdown-item"
+                  role="presentation"
+                  href="AdminInfo.html"
+                  style="color: rgb(151, 149, 149)"
+                  ><strong>Profile</strong></a
+                ><a
+                  class="dropdown-item"
+                  role="presentation"
+                  href="#"
+                  style="color: rgb(151, 149, 149)"
+                  ><strong>Sign out</strong></a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="page projects-page">
+      <!-- Trigger the modal with a button -->
+      <button
+        type="button"
+        class="btn btn-info btn-lg"
+        data-toggle="modal"
+        data-target="#myModal"
+      >
+        Open Modal
+      </button>
+
+      <!-- Modal -->
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Upload Exercise</h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1"> Name </label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="Video Name"
+                  />
+                </div>
+                <label for="customFile"> Video File </label>
+                <div class="custom-file">
+                  <input
+                    type="file"
+                    class="custom-file-input"
+                    id="customFile"
+                  />
+                  <label class="custom-file-label" for="customFile"
+                    >Choose file</label
+                  >
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1"> Description </label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2">Video Description</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Confirm</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-default"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+  <script src="assets/js/Table-With-Search.js"></script>
+  <script src="assets/js/theme.js"></script>
+</html>
