@@ -30,10 +30,6 @@
 
         /* The popup form - hidden by default */
         .form-popup {
-
-
-
-
             border: 3px solid #f1f1f1;
             z-index: 9999;
             margin: 0;
@@ -41,23 +37,27 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            margin-right: -50%;
-            transform: translate(-50%, -50%)
+            transform: translate(-50%, -50%);
+        }
+
+        .form-popup label {
+            font-size: 13px;
+            margin-right: 15px;
+            width: 20%;
         }
 
         /* Add styles to the form container */
         .form-container {
             max-width: 300px;
-            padding: 10px;
             background-color: white;
         }
 
         /* Full-width input fields */
         .form-container input[type=text],
         .form-container input[type=password] {
-            width: 100%;
-            padding: 15px;
-            margin: 5px 0 22px 0;
+            width: 70%;
+            padding: 5px;
+            margin: 5px 0 10px 0;
             border: none;
             background: #f1f1f1;
         }
@@ -73,7 +73,7 @@
         .form-container .btn {
             background-color: #4CAF50;
             color: white;
-            padding: 16px 20px;
+            height: 50px;
             border: none;
             cursor: pointer;
             width: 100%;
@@ -84,6 +84,14 @@
         /* Add a red background color to the cancel button */
         .form-container .cancel {
             background-color: red;
+            color: white;
+            height: 50px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+
         }
 
         /* Add some hover effects to buttons */
@@ -103,8 +111,7 @@
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown"
                             aria-expanded="false" href="#">Account&nbsp;</a>
-                        <div class="dropdown-menu" role="menu"
-                            style="color: black;background-color: rgb(19, 20, 20);">
+                        <div class="dropdown-menu" role="menu" style="color: black;background-color: rgb(19, 20, 20);">
                             <a class="dropdown-item" role="presentation" href="ListTrainee.html"
                                 style="color:rgb(151, 149, 149)"><strong>Manage trainee's account</strong></a>
                             <a class="dropdown-item" role="presentation" href="ListTrainers.html"
@@ -113,15 +120,16 @@
                                 style="color: rgb(151, 149, 149);"><strong>Black List</strong></a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false"
-                        href="#">Course&nbsp;</a>
-                      <div class="dropdown-menu" role="menu" style="color: black;background-color: rgb(0, 0, 0);"><a
-                          class="dropdown-item" role="presentation" href="ListCourse.html" style="color:rgb(151, 149, 149);"><strong>
-                            Exercise Categori</strong></a>
-                            <a
-                          class="dropdown-item" role="presentation" href="ListExercise.html" style="color:rgb(151, 149, 149);"><strong>
-                            Manage Exercise</strong></a>
-                      </div>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown"
+                            aria-expanded="false" href="#">Course&nbsp;</a>
+                        <div class="dropdown-menu" role="menu" style="color: black;background-color: rgb(0, 0, 0);"><a
+                                class="dropdown-item" role="presentation" href="ListCourse.html"
+                                style="color:rgb(151, 149, 149);"><strong>
+                                    Exercise Categori</strong></a>
+                            <a class="dropdown-item" role="presentation" href="ListExercise.html"
+                                style="color:rgb(151, 149, 149);"><strong>
+                                    Manage Exercise</strong></a>
+                        </div>
                     </li>
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown"
                             aria-expanded="false" href="#">&nbsp; <img src="assets/img/avatars/avatar.jpg"
@@ -166,13 +174,13 @@
                                     <td>Legs</td>
 
                                     <td>
-                                     <div style="text-align: center;
+                                        <div style="text-align: center;
                                      ">
-                                        <button class="btn btn-primary" type="button" style="font-size: 12px;background-color: rgb(245,28,14); 
-                                            "><i class="fa fa-trash-o" style="font-size:30px;"></i></button> 
-                                        <button class="btn btn-danger" onclick="openForm()" type="submit"
-                                            style=" background-color:green;  ">
-                                            <i style="font-size:26px;" class="fa">&#xf05a;</i></button></div>
+                                            <button class="btn btn-primary" type="button" style="font-size: 12px;background-color: rgb(245,28,14); 
+                                            "><i class="fa fa-trash-o" style="font-size:30px;"></i></button>
+                                            <button class="btn btn-danger" onclick="openForm()" type="submit"
+                                                style=" background-color:green;  ">
+                                                <i style="font-size:26px;" class="fa">&#xf05a;</i></button></div>
                                         <div class="form-popup" id="myForm" style="display:none">
                                             <form action="/action_page.php" class="form-container">
                                                 <h1 style="display: block;
@@ -207,7 +215,7 @@
                                                     onclick="closeForm()">Close</button>
                                             </form>
                                         </div>
-                                   
+
 
 
                                     </td>
@@ -226,13 +234,13 @@
                                     <td>Arm</td>
 
                                     <td>
-                                     <div style="text-align: center;
+                                        <div style="text-align: center;
                                      ">
-                                        <button class="btn btn-primary" type="button" style="font-size: 12px;background-color: rgb(245,28,14); 
+                                            <button class="btn btn-primary" type="button" style="font-size: 12px;background-color: rgb(245,28,14); 
                                             "><i class="fa fa-trash-o" style="font-size:30px;"></i></button>
-                                        <button class="btn btn-danger" onclick="openForm()" type="submit"
-                                            style=" background-color:green;  ">
-                                            <i style="font-size:26px;" class="fa">&#xf05a;</i></button></div>
+                                            <button class="btn btn-danger" onclick="openForm()" type="submit"
+                                                style=" background-color:green;  ">
+                                                <i style="font-size:26px;" class="fa">&#xf05a;</i></button></div>
 
                                 </tr>
 
@@ -275,7 +283,7 @@
                 style="background-color: #3a749e; height: 100%; text-align: center; margin: 50px auto;">
                 <div class="row">
                     <div class="col-md-4">
-                        <h1 style="font-size: 22px;color: rgb(255,254,254);"><strong>Cơ sở chính:</strong></h1>
+                        <h1 style="font-size: 22px;color: rgb(255,254,254);"><strong>Headquarters:</strong></h1>
                         <hr style="background-color: #f8f5f5;font-size: 16px;height: 1px;">
                         <p style="margin-top: 0px;margin-bottom: 0px;color: rgb(247,246,246);width: 316px;"><i
                                 class="icon-location-pin" style="font-size: 18px;"></i><strong>F-Town, D2 street,
@@ -284,7 +292,7 @@
                                 style="font-size: 18px;"></i><strong>(028) 38.345.345</strong></p>
                     </div>
                     <div class="col-md-4" style="background-color: #3a749e;">
-                        <h1 style="font-size: 22px;color: rgb(251,248,248);"><strong>Cơ sở 2:</strong></h1>
+                        <h1 style="font-size: 22px;color: rgb(251,248,248);"><strong>Second Office</strong></h1>
                         <hr style="background-color: #faf4f4;height: 1px;">
                         <p style="width: 325px;color: rgb(248,244,244);"><i class="icon-location-pin"
                                 style="font-size: 18px;"></i><strong>79 Nguyen &nbsp;Xi Street, Binh Thanh district,
@@ -294,13 +302,12 @@
                         </p>
                     </div>
                     <div class="col-md-4" style="background-color: #3a749e;">
-                        <h1 style="font-size: 22px;color: rgb(252,251,251);"><strong>Quy định &amp; chính
-                                sách</strong></h1>
+                        <h1 style="font-size: 22px;color: rgb(252,251,251);"><strong>Rules & policies</strong></h1>
                         <hr style="height: 1px;color: rgb(251,248,248);background-color: #fbf8f8;">
                         <p style="color: rgb(251,249,249);"><i class="typcn typcn-tick"
-                                style="font-size: 18px;"></i>Điều khoản dịch vụ</p>
+                                style="font-size: 18px;"></i>Terms of Service</p>
                         <p style="color: rgb(251,248,248);"><i class="typcn typcn-tick"
-                                style="font-size: 18px;"></i>Điều khoản dịch vụ</p>
+                                style="font-size: 18px;"></i>Terms of Service</p>
                     </div>
                 </div>
             </div>

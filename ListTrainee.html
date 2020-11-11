@@ -29,10 +29,6 @@
 
         /* The popup form - hidden by default */
         .form-popup {
-
-
-
-
             border: 3px solid #f1f1f1;
             z-index: 9999;
             margin: 0;
@@ -40,23 +36,27 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            margin-right: -50%;
-            transform: translate(-50%, -50%)
+            transform: translate(-50%, -50%);
+        }
+
+        .form-popup label {
+            font-size: 13px;
+            margin-right: 15px;
+            width: 20%;
         }
 
         /* Add styles to the form container */
         .form-container {
             max-width: 300px;
-            padding: 10px;
             background-color: white;
         }
 
         /* Full-width input fields */
         .form-container input[type=text],
         .form-container input[type=password] {
-            width: 100%;
-            padding: 15px;
-            margin: 5px 0 22px 0;
+            width: 70%;
+            padding: 5px;
+            margin: 5px 0 10px 0;
             border: none;
             background: #f1f1f1;
         }
@@ -72,7 +72,7 @@
         .form-container .btn {
             background-color: #4CAF50;
             color: white;
-            padding: 16px 20px;
+            height: 50px;
             border: none;
             cursor: pointer;
             width: 100%;
@@ -83,6 +83,14 @@
         /* Add a red background color to the cancel button */
         .form-container .cancel {
             background-color: red;
+            color: white;
+            height: 50px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+
         }
 
         /* Add some hover effects to buttons */
@@ -102,8 +110,7 @@
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown"
                             aria-expanded="false" href="#">Account&nbsp;</a>
-                        <div class="dropdown-menu" role="menu"
-                            style="color: black;background-color: rgb(19, 20, 20);">
+                        <div class="dropdown-menu" role="menu" style="color: black;background-color: rgb(19, 20, 20);">
                             <a class="dropdown-item" role="presentation" href="ListTrainee.html"
                                 style="color:rgb(151, 149, 149)"><strong>Manage trainee's account</strong></a>
                             <a class="dropdown-item" role="presentation" href="ListTrainers.html"
@@ -112,15 +119,16 @@
                                 style="color: rgb(151, 149, 149);"><strong>Black List</strong></a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false"
-                        href="#">Course&nbsp;</a>
-                      <div class="dropdown-menu" role="menu" style="color: black;background-color: rgb(0, 0, 0);"><a
-                          class="dropdown-item" role="presentation" href="ListCourse.html" style="color:rgb(151, 149, 149);"><strong>
-                            Exercise Categori</strong></a>
-                            <a
-                          class="dropdown-item" role="presentation" href="ListExercise.html" style="color:rgb(151, 149, 149);"><strong>
-                            Manage Exercise</strong></a>
-                      </div>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown"
+                            aria-expanded="false" href="#">Course&nbsp;</a>
+                        <div class="dropdown-menu" role="menu" style="color: black;background-color: rgb(0, 0, 0);"><a
+                                class="dropdown-item" role="presentation" href="ListCourse.html"
+                                style="color:rgb(151, 149, 149);"><strong>
+                                    Exercise Categori</strong></a>
+                            <a class="dropdown-item" role="presentation" href="ListExercise.html"
+                                style="color:rgb(151, 149, 149);"><strong>
+                                    Manage Exercise</strong></a>
+                        </div>
                     </li>
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown"
                             aria-expanded="false" href="#">&nbsp; <img src="assets/img/avatars/avatar.jpg"
@@ -139,7 +147,8 @@
 
     <main class="page projects-page">
         <section class="portfolio-block projects-cards">
-            <h1 style="font-size: 30px;margin-bottom: 0px;margin-top: -60px;color: rgb(197,102,102); text-align: center;">
+            <h1
+                style="font-size: 30px;margin-bottom: 0px;margin-top: -60px;color: rgb(197,102,102); text-align: center;">
                 LIST OF TRAINEE</h1>
             <div class="container">
                 <div class="col-md-12 search-table-col" style="margin-bottom: 0px;margin-top: 24px;">
@@ -167,11 +176,11 @@
                                     <td>
 
                                         <button onclick="Redirect()" ; class="btn btn-danger" type="submit"
-                                            style="margin-left: 30px;"><i class="typcn typcn-cancel"
+                                            style="margin: 5px;"><i class="typcn typcn-cancel"
                                                 style="font-size: 18px;"></i></button>
 
                                         <button class="btn btn-danger" onclick="openForm()" type="submit"
-                                            style="margin: 5px; background-color:green;font-color: green; ">
+                                            style="margin: 5 5 5 4.9px; background-color:green;font-color: green; ">
                                             <i style="font-size:23px;" class="fa">&#xf05a;</i></button>
                                     </td>
 
@@ -185,23 +194,20 @@
                                     <td>0578833388</td>
                                     <td>Male</td>
 
-                                    <td><button class="btn btn-danger" type="submit" style="margin: 5px;"><i
-                                                class="typcn typcn-cancel" style="font-size: 18px;"></i></button>
+                                    <td><button onclick="Redirect()" ; class="btn btn-danger" type="submit"
+                                            style="margin: 5px;"><i class="typcn typcn-cancel"
+                                                style="font-size: 18px;"></i></button>
                                         <button class="btn btn-danger" onclick="openForm()" type="submit"
                                             style="margin: 5 5 5 4.9px; background-color:green;font-color: green; ">
                                             <i style="font-size:23px;" class="fa">&#xf05a;</i></button>
-                                        <div class="form-popup" id="myForm" style="display:none">
+                                        <div class="form-popup display-flex" id="myForm" style="display:none;">
                                             <form action="/action_page.php" class="form-container">
-                                                <h1 style="margin-left:17%; margin-top:50%">Trainee's information</h1>
-                                                <div style="position: absolute;
-    							margin-top: 19%;
-    							left: 50%;
-   							 margin-right: -50%;
-    							transform: translate(-50%, -50%)"><img src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t1.15752-9/123681594_1219027958471571_5285980700792844473_n.jpg?_nc_cat=100&ccb=2&_nc_sid=ae9488&_nc_ohc=5nuR_PnjxJcAX8bdDSu&_nc_ht=scontent.fsgn2-6.fna&oh=7c390a893c800e42db9da883d43d1eba&oe=5FCEA452"
-                                                        alt="Avatar"
-                                                        style="margin:50px auto;min-width: 200px;min-height: 200px;width: 100px;height: 100px; border-radius: 50%;">
+                                                <h1>Trainee's information</h1>
+                                                <div style="text-align: center;"><img
+                                                        src="https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?size=626&ext=jpg"
+                                                        alt="Avatar" style="height: 200px;">
                                                 </div>
-                                                <label for="email" style="margin-top:200px"><b>Email</b></label>
+                                                <label for="email" style=""><b>Email</b></label>
                                                 <input type="text" value="DatUI@gmail.com" readonly>
 
                                                 <label for="name"><b>Name</b></label>
@@ -237,8 +243,9 @@
                                     <td>057888888888</td>
                                     <td>Female</td>
 
-                                    <td><button class="btn btn-danger" type="submit" style="margin-left: 5px;"><i
-                                                class="typcn typcn-cancel" style="font-size: 18px;"></i></button>
+                                    <td><button onclick="Redirect()" ; class="btn btn-danger" type="submit"
+                                            style="margin-left: 5px;"><i class="typcn typcn-cancel"
+                                                style="font-size: 18px;"></i></button>
                                         <button class="btn btn-danger" onclick="openForm()" type="submit"
                                             style="margin: 5px; background-color:green;font-color: green; ">
                                             <i style="font-size:23px;" class="fa">&#xf05a;</i></button>
@@ -250,8 +257,9 @@
                                     <td>057888888888</td>
                                     <td>Male</td>
 
-                                    <td><button class="btn btn-danger" type="submit" style="margin-left: 5px;"><i
-                                                class="typcn typcn-cancel" style="font-size: 18px;"></i></button>
+                                    <td><button onclick="Redirect()" ; class="btn btn-danger" type="submit"
+                                            style="margin-left: 5px;"><i class="typcn typcn-cancel"
+                                                style="font-size: 18px;"></i></button>
                                         <button class="btn btn-danger" onclick="openForm()" type="submit"
                                             style="margin: 5px; background-color:green;font-color: green; ">
                                             <i style="font-size:23px;" class="fa">&#xf05a;</i></button>
@@ -263,8 +271,9 @@
                                     <td>057888888888</td>
                                     <td>Male</td>
 
-                                    <td><button class="btn btn-danger" type="submit" style="margin-left: 5px;"><i
-                                                class="typcn typcn-cancel" style="font-size: 18px;"></i></button>
+                                    <td><button onclick="Redirect()" ; class="btn btn-danger" type="submit"
+                                            style="margin-left: 5px;"><i class="typcn typcn-cancel"
+                                                style="font-size: 18px;"></i></button>
                                         <button class="btn btn-danger" onclick="openForm()" type="submit"
                                             style="margin: 5px; background-color:green;font-color: green; ">
                                             <i style="font-size:23px;" class="fa">&#xf05a;</i></button>
@@ -276,8 +285,9 @@
                                     <td>057888888888</td>
                                     <td>Female</td>
 
-                                    <td><button class="btn btn-danger" type="submit" style="margin-left: 5px;"><i
-                                                class="typcn typcn-cancel" style="font-size: 18px;"></i></button>
+                                    <td><button onclick="Redirect()" ; class="btn btn-danger" type="submit"
+                                            style="margin-left: 5px;"><i class="typcn typcn-cancel"
+                                                style="font-size: 18px;"></i></button>
                                         <button class="btn btn-danger" onclick="openForm()" type="submit"
                                             style="margin: 5px; background-color:green;font-color: green; ">
                                             <i style="font-size:23px;" class="fa">&#xf05a;</i></button>
@@ -289,8 +299,9 @@
                                     <td>057888888888</td>
                                     <td>Male</td>
 
-                                    <td><button class="btn btn-danger" type="submit" style="margin-left: 5px;"><i
-                                                class="typcn typcn-cancel" style="font-size: 18px;"></i></button>
+                                    <td><button onclick="Redirect()" ; class="btn btn-danger" type="submit"
+                                            style="margin-left: 5px;"><i class="typcn typcn-cancel"
+                                                style="font-size: 18px;"></i></button>
                                         <button class="btn btn-danger" onclick="openForm()" type="submit"
                                             style="margin: 5px; background-color:green;font-color: green; ">
                                             <i style="font-size:23px;" class="fa">&#xf05a;</i></button>
@@ -333,7 +344,7 @@
                 style="background-color: #3a749e; height: 100%; text-align: center; margin: 50px auto;">
                 <div class="row">
                     <div class="col-md-4">
-                        <h1 style="font-size: 22px;color: rgb(255,254,254);"><strong>Cơ sở chính:</strong></h1>
+                        <h1 style="font-size: 22px;color: rgb(255,254,254);"><strong>Headquarters:</strong></h1>
                         <hr style="background-color: #f8f5f5;font-size: 16px;height: 1px;">
                         <p style="margin-top: 0px;margin-bottom: 0px;color: rgb(247,246,246);width: 316px;"><i
                                 class="icon-location-pin" style="font-size: 18px;"></i><strong>F-Town, D2 street,
@@ -342,7 +353,7 @@
                                 style="font-size: 18px;"></i><strong>(028) 38.345.345</strong></p>
                     </div>
                     <div class="col-md-4" style="background-color: #3a749e;">
-                        <h1 style="font-size: 22px;color: rgb(251,248,248);"><strong>Cơ sở 2:</strong></h1>
+                        <h1 style="font-size: 22px;color: rgb(251,248,248);"><strong>Second Office</strong></h1>
                         <hr style="background-color: #faf4f4;height: 1px;">
                         <p style="width: 325px;color: rgb(248,244,244);"><i class="icon-location-pin"
                                 style="font-size: 18px;"></i><strong>79 Nguyen &nbsp;Xi Street, Binh Thanh district,
@@ -352,13 +363,12 @@
                         </p>
                     </div>
                     <div class="col-md-4" style="background-color: #3a749e;">
-                        <h1 style="font-size: 22px;color: rgb(252,251,251);"><strong>Quy định &amp; chính
-                                sách</strong></h1>
+                        <h1 style="font-size: 22px;color: rgb(252,251,251);"><strong>Rules & policies</strong></h1>
                         <hr style="height: 1px;color: rgb(251,248,248);background-color: #fbf8f8;">
                         <p style="color: rgb(251,249,249);"><i class="typcn typcn-tick"
-                                style="font-size: 18px;"></i>Điều khoản dịch vụ</p>
+                                style="font-size: 18px;"></i>Terms of Service</p>
                         <p style="color: rgb(251,248,248);"><i class="typcn typcn-tick"
-                                style="font-size: 18px;"></i>Điều khoản dịch vụ</p>
+                                style="font-size: 18px;"></i>Terms of Service</p>
                     </div>
                 </div>
             </div>
