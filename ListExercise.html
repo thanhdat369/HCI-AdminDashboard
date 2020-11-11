@@ -103,6 +103,7 @@
 </head>
 
 <body>
+
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark portfolio-navbar">
         <div class="container"><a class="navbar-brand logo" href="index.html"><b>F P T</b></a><button
                 class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="sr-only">Toggle
@@ -148,8 +149,11 @@
     <main class="page projects-page">
         <section class="portfolio-block projects-cards">
             <h1 style="font-size: 30px;margin-bottom: 0px;margin-top: 0px;color: rgb(197,102,102); text-align: center;">
-                LISt OF EXERCISE</h1>
-            <div class="container">
+                LISt OF EXERCISE <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+                    data-target="#myModalAdd">
+                    Add new exercise
+                </button></h1>
+            < <div class="container">
                 <div class="col-md-12 search-table-col" style="margin-bottom: 0px;margin-top: 24px;">
                     <div class="form-group pull-right col-lg-4"><input type="text" placeholder="Search by typing here.."
                             class="search form-control"></div><span class="counter pull-right"></span>
@@ -269,10 +273,60 @@
 
 
                 </div>
-            </div>
-            </div>
+                </div>
+                </div>
+                <div id="myModalAdd" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Upload Exercise</h4>
+                                <button type="button" class="close" data-dismiss="modal">
+                                    &times;
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1"> Name </label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="Exercise Name" />
+                                    </div>
+                                    <label for="customFile"> Video File </label>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFileInput" />
+                                        <label class="custom-file-label" for="customFileInput">Choose file</label>
+                                        <div class="form-group">
+                                            <label for="cars">Categori: </label>
+
+                                            <select name="cars" id="cars">
+                                                <option value="ABS	
+">ABS
+                                                </option>
+                                                <option value="BACK">BACK</option>
+                                                <option value="BICEPS">BICEPS</option>
+                                                <option value="CALF">CALF</option>
+                                                <option value="CHEST">CHEST</option>
+                                                <option value="LEGS">LEGS</option>
+                                                <option value="FOREARMS">FOREARMS</option>
+                                            </select>
+                                            <!-- <textarea class="form-control" id="exampleFormControlTextarea1"
+                                            rows="2">Video Description</textarea> -->
+                                        </div>
+                                        <button type="submit" class="btn btn-primary mb-2">Confirm</button>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </section>
     </main>
+
 
 </body>
 
