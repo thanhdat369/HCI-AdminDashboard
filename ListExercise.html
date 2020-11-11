@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="assets/css/Table-With-Search-1.css">
     <link rel="stylesheet" href="assets/css/Table-With-Search.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
@@ -30,10 +29,6 @@
 
         /* The popup form - hidden by default */
         .form-popup {
-
-
-
-
             border: 3px solid #f1f1f1;
             z-index: 9999;
             margin: 0;
@@ -56,8 +51,8 @@
         .form-container input[type=text],
         .form-container input[type=password] {
             width: 100%;
-            padding: 15px;
-            margin: 5px 0 22px 0;
+            padding: 10px;
+            margin: 5px 0 5px 0;
             border: none;
             background: #f1f1f1;
         }
@@ -73,11 +68,11 @@
         .form-container .btn {
             background-color: #4CAF50;
             color: white;
-            padding: 16px 20px;
+            padding: 5px 5px;
             border: none;
             cursor: pointer;
             width: 100%;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             opacity: 0.8;
         }
 
@@ -138,9 +133,9 @@
         </div>
     </nav>
     <main class="page projects-page">
-        <section class="portfolio-block projects-cards">
-            <h1 style="font-size: 30px;margin-bottom: 0px;margin-top: 0px;color: rgb(197,102,102); text-align: center;">
-                LISt OF EXERCISE</h1>
+               <section class="portfolio-block projects-cards">
+            <h1 style="text-align: center;">
+                LIST OF EXERCISE</h1>
             <div class="container">
                 <div class="col-md-12 search-table-col" style="margin-bottom: 0px;margin-top: 24px;">
                     <div class="form-group pull-right col-lg-4"><input type="text" placeholder="Search by typing here.."
@@ -174,10 +169,8 @@
                                             style=" background-color:green;  ">
                                             <i style="font-size:26px;" class="fa">&#xf05a;</i></button></div>
                                         <div class="form-popup" id="myForm" style="display:none">
-                                            <form action="/action_page.php" class="form-container">
+                                            <form class="form-container">
                                                 <h1 style="display: block;
-                                                margin-left: 25%;
-                                                margin-top: 10%;
                                                 ">Exercise Detail</h1>
                                                 <iframe style=" display: block;
                                                 margin-left: auto;
@@ -186,7 +179,6 @@
                                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                     allowfullscreen>
                                                 </iframe>
-                                                <br>
 
                                                 <label for="ID"><b>ID</b></label>
                                                 <input type="text" value="1">
@@ -264,50 +256,11 @@
             </div>
             </div>
         </section>
+      
     </main>
 
 </body>
 
-<footer class="page-footer" style="margin:50px auto; background-color: #3a749e; height: 100%;">
-    <div class="container" style="height: 50%;">
-        <div class="footer">
-            <div class="container"
-                style="background-color: #3a749e; height: 100%; text-align: center; margin: 50px auto;">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h1 style="font-size: 22px;color: rgb(255,254,254);"><strong>Cơ sở chính:</strong></h1>
-                        <hr style="background-color: #f8f5f5;font-size: 16px;height: 1px;">
-                        <p style="margin-top: 0px;margin-bottom: 0px;color: rgb(247,246,246);width: 316px;"><i
-                                class="icon-location-pin" style="font-size: 18px;"></i><strong>F-Town, D2 street,
-                                Saigon Hi-tech park, District &nbsp;9, HCM city</strong></p>
-                        <p style="margin-top: 0px;margin-bottom: 0px;color: rgb(250,247,247);"><i class="icon-phone"
-                                style="font-size: 18px;"></i><strong>(028) 38.345.345</strong></p>
-                    </div>
-                    <div class="col-md-4" style="background-color: #3a749e;">
-                        <h1 style="font-size: 22px;color: rgb(251,248,248);"><strong>Cơ sở 2:</strong></h1>
-                        <hr style="background-color: #faf4f4;height: 1px;">
-                        <p style="width: 325px;color: rgb(248,244,244);"><i class="icon-location-pin"
-                                style="font-size: 18px;"></i><strong>79 Nguyen &nbsp;Xi Street, Binh Thanh district,
-                                HCM city</strong></p>
-                        <p style="width: 325px;color: rgb(248,244,244);margin-top: -14px;"><strong>&nbsp;</strong><i
-                                class="icon-phone" style="font-size: 18px;"></i><strong>(028) 38 567.567</strong>
-                        </p>
-                    </div>
-                    <div class="col-md-4" style="background-color: #3a749e;">
-                        <h1 style="font-size: 22px;color: rgb(252,251,251);"><strong>Quy định &amp; chính
-                                sách</strong></h1>
-                        <hr style="height: 1px;color: rgb(251,248,248);background-color: #fbf8f8;">
-                        <p style="color: rgb(251,249,249);"><i class="typcn typcn-tick"
-                                style="font-size: 18px;"></i>Điều khoản dịch vụ</p>
-                        <p style="color: rgb(251,248,248);"><i class="typcn typcn-tick"
-                                style="font-size: 18px;"></i>Điều khoản dịch vụ</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</footer>
 <script>
     function openForm() {
         document.getElementById("myForm").style.display = "block";
